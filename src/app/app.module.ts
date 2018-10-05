@@ -14,6 +14,7 @@ import { HomeComponent } from './public/home/home.component';
 import { SignInComponent } from './public/sign-in/sign-in.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ArticleComponent } from './public/article/article.component';
+import { UserService } from './services/user.service';
 
 const router: Routes = [
   { path: 'signin' , component: SignInComponent},
@@ -42,7 +43,7 @@ const router: Routes = [
     HttpClientModule,
     RouterModule.forRoot(router)
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })
