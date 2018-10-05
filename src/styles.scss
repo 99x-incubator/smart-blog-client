@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-rounded {
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+}
 .ql-editor{
     height: 500px;
 }

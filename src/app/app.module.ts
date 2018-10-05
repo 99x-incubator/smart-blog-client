@@ -20,10 +20,9 @@ import { QuillModule } from 'ngx-quill';
 import { CreateArticleComponent } from './secure/create-article/create-article.component';
 
 const router: Routes = [
-  { path: 'signin' , component: SignInComponent},
+  { path: 'sign-in' , component: SignInComponent},
+  { path: 'sign-up' , component: SignUpComponent},
   { path: 'createarticle', component: CreateArticleComponent},
-  { path: '' , redirectTo: '/signin' , pathMatch: 'full'},
-  { path: 'signup' , component: SignUpComponent},
   { path: 'home' , component: HomeComponent},
   { path: 'article' , component: ArticleComponent},
   { path: '' , redirectTo: '/home' , pathMatch: 'full'}
