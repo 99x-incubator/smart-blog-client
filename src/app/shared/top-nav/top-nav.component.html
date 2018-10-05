@@ -4,13 +4,16 @@
   </mdb-navbar-brand>
   <links>
      
-      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav" *ngIf="!user">
         <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
-    </li>
+            <button mdbBtn routerLink="/sign-in" type="button" color="white" class="waves-light white-border" outline="true" mdbWavesEffect>Sign In</button>
+          </li>
     <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
+        <!-- <button mdbBtn type="button" color="default" class="waves-light bg-white " outline="true" mdbWavesEffect>Sign Up</button> -->
+        <button mdbBtn routerLink="/sign-up" type="button" color="default" class="waves-light cyan-border" mdbWavesEffect>Sign Up</button> <!-- <a class="nav-link waves-light" mdbWavesEffect> <span class="clearfix d-none d-sm-inline-block">Sign Up</span></a> -->
     </li>
+    </ul>
+    <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav" *ngIf="user">
     <li class="nav-item">
         <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>
     </li>

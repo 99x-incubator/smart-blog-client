@@ -15,8 +15,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ArticleComponent } from './public/article/article.component';
 
 const router: Routes = [
-  { path: 'signin' , component: SignInComponent},
-  { path: 'signup' , component: SignUpComponent},
+  { path: 'sign-in' , component: SignInComponent},
+  { path: 'sign-up' , component: SignUpComponent},
   { path: 'home' , component: HomeComponent},
   { path: 'article' , component: ArticleComponent},
   { path: '' , redirectTo: '/home' , pathMatch: 'full'}
