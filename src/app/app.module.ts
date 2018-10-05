@@ -8,12 +8,14 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './public/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
     HomeComponent
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
