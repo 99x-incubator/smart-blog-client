@@ -1,0 +1,101 @@
+<!-- Material form register -->
+
+<div style="height: 100vh">
+  <div class="flex-center flex-column">
+<mdb-card>
+
+<mdb-card-header class="info-color white-text text-center py-4">
+  <h5>
+    <strong>Sign up</strong>
+  </h5>
+</mdb-card-header>
+
+<!--Card content-->
+<mdb-card-body class="px-lg-5 pt-0">
+
+  <!-- Form -->
+  <form class="text-center" style="color: #757575;">
+
+    <div class="form-row">
+      <div class="col">
+        <!-- First name -->
+        <div class="md-form">
+          <input type="text" id="materialRegisterFormFirstName" class="form-control" mdbInputDirective>
+          <label for="materialRegisterFormFirstName">First name</label>
+        </div>
+      </div>
+      <div class="col">
+        <!-- Last name -->
+        <div class="md-form">
+          <input type="email" id="materialRegisterFormLastName" class="form-control" mdbInputDirective>
+          <label for="materialRegisterFormLastName">Last name</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- E-mail -->
+    <div class="md-form mt-0">
+      <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInputDirective>
+      <label for="materialRegisterFormEmail">E-mail</label>
+    </div>
+
+    <!-- Password -->
+    <div class="md-form">
+      <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+        mdbInputDirective>
+      <label for="materialRegisterFormPassword">Password</label>
+      <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
+      </small>
+    </div>
+
+    <!-- Phone number -->
+    <div class="md-form">
+      <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock"
+        mdbInputDirective>
+      <label for="materialRegisterFormPhone">Phone number</label>
+      <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+        Optional - for two step authentication
+      </small>
+    </div>
+
+    <!-- Newsletter -->
+    <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
+
+    <!-- Sign up button -->
+    <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+      type="submit">Sign in</button>
+
+    <!-- Social register -->
+    <p>or sign up with:</p>
+
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon icon="facebook"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon icon="twitter"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon icon="linkedin"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon icon="github"></mdb-icon>
+    </a>
+
+    <hr>
+
+    <!-- Terms of service -->
+    <p>By clicking
+      <em>Sign up</em> you agree to our
+      <a href="" target="_blank">terms of service</a> and
+      <a href="" target="_blank">terms of service</a>. </p>
+
+  </form>
+  <!-- Form -->
+
+</mdb-card-body>
+
+</mdb-card>
+</div>
+</div>
+<!-- Material form register -->
