@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { TopNavComponent } from './top-nav/top-nav.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopNavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
