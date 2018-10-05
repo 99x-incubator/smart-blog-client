@@ -16,8 +16,13 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ArticleComponent } from './public/article/article.component';
 import { UserService } from './services/user.service';
 
+import { QuillModule } from 'ngx-quill';
+import { CreateArticleComponent } from './secure/create-article/create-article.component';
+
 const router: Routes = [
   { path: 'signin' , component: SignInComponent},
+  { path: 'createarticle', component: CreateArticleComponent},
+  { path: '' , redirectTo: '/signin' , pathMatch: 'full'},
   { path: 'signup' , component: SignUpComponent},
   { path: 'home' , component: HomeComponent},
   { path: 'article' , component: ArticleComponent},
@@ -32,7 +37,8 @@ const router: Routes = [
     HomeComponent,
     SignInComponent,
     FooterComponent,
-    ArticleComponent
+    ArticleComponent,
+    CreateArticleComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,8 @@ const router: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(router)
+    RouterModule.forRoot(router),
+    QuillModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent],
