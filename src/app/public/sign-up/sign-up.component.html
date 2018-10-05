@@ -14,57 +14,58 @@
 <mdb-card-body class="px-lg-5 pt-0">
 
   <!-- Form -->
-  <form class="text-center" style="color: #757575;">
+      <form class="text-center" style="color: #757575;" [formGroup]="signUpForm">
 
     <div class="form-row">
       <div class="col">
         <!-- First name -->
         <div class="md-form">
-          <input type="text" id="materialRegisterFormFirstName" class="form-control" mdbInputDirective>
+          <input type="text" formControlName="fname" id="fname" class="form-control" mdbInputDirective>
           <label for="materialRegisterFormFirstName">First name</label>
+          <span *ngIf="isValid('fname')">First name is required</span>
         </div>
       </div>
       <div class="col">
         <!-- Last name -->
         <div class="md-form">
-          <input type="email" id="materialRegisterFormLastName" class="form-control" mdbInputDirective>
+          <input type="text" formControlName="lname" id="lname" class="form-control" mdbInputDirective>
           <label for="materialRegisterFormLastName">Last name</label>
+          <span *ngIf="isValid('lname')">Last name is required</span>
         </div>
       </div>
     </div>
 
     <!-- E-mail -->
     <div class="md-form mt-0">
-      <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInputDirective>
+      <input type="email" formControlName="email" id="email" class="form-control" mdbInputDirective>
       <label for="materialRegisterFormEmail">E-mail</label>
+      <span *ngIf="isValid('email')">Entered email is invalid</span>
     </div>
 
     <!-- Password -->
     <div class="md-form">
-      <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+      <input type="password" formControlName="password" id="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
         mdbInputDirective>
       <label for="materialRegisterFormPassword">Password</label>
       <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
         At least 8 characters and 1 digit
       </small>
+      <span *ngIf="isValid('password')">Password is a mandatory field</span>
     </div>
 
-    <!-- Phone number -->
     <div class="md-form">
-      <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock"
+      <input type="password" formControlName="cnfpass" id="cnfpass" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
         mdbInputDirective>
-      <label for="materialRegisterFormPhone">Phone number</label>
-      <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-        Optional - for two step authentication
+      <label for="materialRegisterFormPassword">Confirm password</label>
+      <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
       </small>
+      <span *ngIf="isValid('cnfpass')">Password and confirm password should match</span>
     </div>
-
-    <!-- Newsletter -->
-    <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
 
     <!-- Sign up button -->
     <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
-      type="submit">Sign in</button>
+    (click)="signup()" >Sign up</button>
 
     <!-- Social register -->
     <p>or sign up with:</p>
