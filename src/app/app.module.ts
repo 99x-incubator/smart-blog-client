@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './public/sign-up/sign-up.component';
 import { SignInComponent } from './public/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SignUpComponent,
     SignInComponent,
   ],
   imports: [
