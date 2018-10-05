@@ -18,13 +18,13 @@
 
     <!-- Email -->
     <div class="md-form">
-      <input type="email" id="materialLoginFormEmail" class="form-control" mdbInputDirective #userEmail>
+      <input type="text" id="materialLoginFormEmail" class="form-control" mdbInputDirective #userEmail>
       <label for="materialLoginFormEmail">E-mail</label>
     </div>
 
     <!-- Password -->
     <div class="md-form">
-      <input type="password" id="materialLoginFormPassword" class="form-control" mdbInputDirective #userPassword>
+      <input type="text" id="materialLoginFormPassword" class="form-control" mdbInputDirective #userPassword>
       <label for="materialLoginFormPassword">Password</label>
     </div>
 
@@ -41,7 +41,7 @@
 
     <!-- Sign in button -->
     <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
-      type="submit">Sign in</button>
+      (click)="checkingCredentials(userEmail, userPassword)" >Sign in</button>
 
     <!-- Register -->
     <p>Not a member?
