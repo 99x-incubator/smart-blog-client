@@ -43,4 +43,22 @@ export class SignUpComponent implements OnInit {
     return null;
   }
 
+  isValid(controlName) {
+    return this.signUpForm.get(controlName).invalid && this.signUpForm.get(controlName).touched;
+  }
+
+  signup() {
+    console.log(this.signUpForm.value);
+
+    // if (this.signUpForm.valid) {
+    //   this.signUpForm.submitRegister(this.signUpForm.value)
+    //     .subscribe(
+    //       data => this.successMessage = 'Registration Success',
+    //       error => this.successMessage = 'SOme error'
+    //     );
+    // }
+
+  }
+
+
 }
