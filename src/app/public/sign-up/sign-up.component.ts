@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +12,9 @@ export class SignUpComponent implements OnInit {
 
   signUpForm: FormGroup;
 
-  constructor() {
+  constructor(private _userservice: UserService,
+    private _router: Router,
+    private _activatedRoute: ActivatedRoute) {
 
     this.signUpForm = new FormGroup({
       email: new FormControl(null, Validators.email),
