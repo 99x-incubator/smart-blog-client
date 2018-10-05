@@ -14,8 +14,13 @@ import { SignInComponent } from './public/sign-in/sign-in.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ArticleComponent } from './public/article/article.component';
 
+import { QuillModule } from 'ngx-quill';
+import { CreateArticleComponent } from './secure/create-article/create-article.component';
+
 const router: Routes = [
   { path: 'signin' , component: SignInComponent},
+  { path: 'createarticle', component: CreateArticleComponent},
+  { path: '' , redirectTo: '/signin' , pathMatch: 'full'},
   { path: 'signup' , component: SignUpComponent},
   { path: 'home' , component: HomeComponent},
   { path: 'article' , component: ArticleComponent},
@@ -30,14 +35,16 @@ const router: Routes = [
     HomeComponent,
     SignInComponent,
     FooterComponent,
-    ArticleComponent
+    ArticleComponent,
+    CreateArticleComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
-    RouterModule.forRoot(router)
+    RouterModule.forRoot(router),
+    QuillModule
   ],
   providers: [],
   bootstrap: [AppComponent],
