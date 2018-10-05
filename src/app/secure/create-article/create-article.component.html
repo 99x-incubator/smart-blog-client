@@ -4,7 +4,7 @@
 <div class="container py-3">
   
   <div class="md-form">
-    <input mdbInputDirective type="text" id="form1" class="form-control">
+    <input mdbInputDirective type="text" id="form1" class="form-control" [(ngModel)]="articleTitle">
     <label for="form1" class="">Enter The Article Title</label>
   </div>
 
@@ -16,12 +16,16 @@
   </div>
 
   
-  <quill-editor theme='snow' scrollingContainer="html, body" placeholder="Add content here..." [(ngModel)]="artileContent"></quill-editor>
+  <quill-editor theme='snow' scrollingContainer="html, body" placeholder="Add content here..." [(ngModel)]="articleContent"></quill-editor>
 
-  <button mdbBtn type="button" color="default" class="waves-light pull-right" mdbWavesEffect>Default</button>
-  <div class="my-5 py-3">
+  {{articleContentFromHtml}}
 
-  </div>
+  <div [innerHtml]="content"></div>
+
+  
+
+  <button mdbBtn type="button" color="default" class="waves-light pull-right" mdbWavesEffect (click)="submitArticleInfo()">Publish</button>
+  <div class="my-5 py-3"></div>
 </div>
 
 
