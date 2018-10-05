@@ -16,8 +16,10 @@ import { ArticleComponent } from './public/article/article.component';
 
 const router: Routes = [
   { path: 'signin' , component: SignInComponent},
-
-  { path: '' , redirectTo: '/signin' , pathMatch: 'full'}
+  { path: 'signup' , component: SignUpComponent},
+  { path: 'home' , component: HomeComponent},
+  { path: 'article' , component: ArticleComponent},
+  { path: '' , redirectTo: '/home' , pathMatch: 'full'}
 ];
 
 @NgModule({
