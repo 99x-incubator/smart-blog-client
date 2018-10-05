@@ -11,6 +11,7 @@ import { UserService } from '../../services/user.service';
 export class SignUpComponent implements OnInit {
 
   signUpForm: FormGroup;
+  private successMessage: string = "";
 
   constructor(private _userservice: UserService,
     private _router: Router,
@@ -53,13 +54,15 @@ export class SignUpComponent implements OnInit {
   signup() {
     console.log(this.signUpForm.value);
 
-    // if (this.signUpForm.valid) {
-    //   this.signUpForm.submitRegister(this.signUpForm.value)
-    //     .subscribe(
-    //       data => this.successMessage = 'Registration Success',
-    //       error => this.successMessage = 'SOme error'
-    //     );
-    // }
+    if (this.signUpForm.valid) {
+      this._userservice.signupUser(this.signUpForm.value)
+        .subscribe(
+          data => console.log(data),
+          error => this.successMessage = 'SOme error'
+        );
+
+        
+    }
 
   }
 
