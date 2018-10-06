@@ -4,10 +4,11 @@
   <div class="flex-center flex-column">
 <mdb-card>
 
-<mdb-card-header class="info-color white-text text-center py-4">
-  <h5>
-    <strong>Sign up</strong>
-  </h5>
+<mdb-card-header class="cyan darken-3 white-text text-center py-4">
+    <h3>
+        <strong>Smart Blog</strong>
+      </h3>
+      <h5>Sign up</h5>
 </mdb-card-header>
 
 <!--Card content-->
@@ -47,9 +48,9 @@
       <input type="password" formControlName="password" id="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
         mdbInputDirective>
       <label for="materialRegisterFormPassword">Password</label>
-      <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+      <!-- <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
         At least 8 characters and 1 digit
-      </small>
+      </small> -->
       <span *ngIf="isValid('password')">Password is a mandatory field</span>
     </div>
 
@@ -57,29 +58,29 @@
       <input type="password" formControlName="cnfpass" id="cnfpass" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
         mdbInputDirective>
       <label for="materialRegisterFormPassword">Confirm password</label>
-      <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+      <!-- <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
         At least 8 characters and 1 digit
-      </small>
+      </small> -->
       <span *ngIf="isValid('cnfpass')">Password and confirm password should match</span>
     </div>
 
     <!-- Sign up button -->
-    <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+    <button mdbBtn color="default" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
     (click)="signup()" >Sign up</button>
 
     <!-- Social register -->
     <p>or sign up with:</p>
 
-    <a type="button" class="light-blue-text mx-2">
+    <a type="button" class="teal-text mx-2">
       <mdb-icon icon="facebook"></mdb-icon>
     </a>
-    <a type="button" class="light-blue-text mx-2">
+    <a type="button" class="teal-text mx-2">
       <mdb-icon icon="twitter"></mdb-icon>
     </a>
-    <a type="button" class="light-blue-text mx-2">
+    <a type="button" class="teal-text mx-2">
       <mdb-icon icon="linkedin"></mdb-icon>
     </a>
-    <a type="button" class="light-blue-text mx-2">
+    <a type="button" class="teal-text mx-2">
       <mdb-icon icon="github"></mdb-icon>
     </a>
 
