@@ -4,9 +4,11 @@
 <mdb-card>
 
 <mdb-card-header class="cyan darken-3 white-text text-center py-4">
-  <h5>
-    <strong>Sign in</strong>
-  </h5>
+ 
+  <h3>
+    <strong>Smart Blog</strong>
+  </h3>
+  <h5>Sign in</h5>
 </mdb-card-header>
 
 
@@ -14,7 +16,7 @@
 <mdb-card-body class="px-lg-5 pt-0">
 
   <!-- Form -->
-  <form class="text-center" style="color: #757575;">
+  <form class="text-center" style="color: #757575;" [formGroup]="signInForm" >
 
     <!-- Email -->
     <div class="md-form">
@@ -34,18 +36,18 @@
         <mdb-checkbox>Remember me</mdb-checkbox>
       </div>
       <div>
-        <!-- Forgot password -->
+        <!-- Forgot password -->&nbsp;
         <a href="">Forgot password?</a>
       </div>
     </div>
 
     <!-- Sign in button -->
-    <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
-      (click)="checkingCredentials(userEmail, userPassword)" routerLink="/home">Sign in</button>
+    <button mdbBtn color="default" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+      (click)="submit(userEmail, userPassword)" routerLink="/home">Sign in</button>
 
     <!-- Register -->
     <p>Not a member?
-      <a href="">Register</a>
+      <a routerLink="/sign-up">Register</a>
     </p>
 
     <!-- Social login -->

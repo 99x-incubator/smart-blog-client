@@ -61,7 +61,6 @@ export class SignUpComponent implements OnInit {
           error => this.successMessage = 'SOme error'
         );
 
-        
     }
 
   }
