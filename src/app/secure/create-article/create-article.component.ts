@@ -14,8 +14,6 @@ export class CreateArticleComponent implements OnInit {
   public b64;
   public articleC;
 
-  articleContentFromHtml;
-
   constructor(public articleService: ArticleService) { }
 
   ngOnInit() {
@@ -24,38 +22,34 @@ export class CreateArticleComponent implements OnInit {
   public onFileSelected(event) {
     // this.articleImageFile = event.target.files[0];
 
-      let reader = new FileReader();
-     
-      if(event.target.files && event.target.files.length) {
-        const [file] = event.target.files;
-        reader.readAsDataURL(file);
-      
-        reader.onload = () => {
-          
-            this.b64 = reader.result
-            console.log(this.b64);
-          
-          // need to run CD since file load runs outside of zone
-          // this.cd.markForCheck();
-        };
-      }
+    let reader = new FileReader();
+
+    if (event.target.files && event.target.files.length) {
+      const [file] = event.target.files;
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        this.b64 = reader.result
+        console.log(this.b64);
+        // need to run CD since file load runs outside of zone
+        // this.cd.markForCheck();
+      };
     }
-  
+  }
 
   public submitArticleInfo() {
-    this.articleC = this.articleContent;
     try {
-       const article: any = {
+      const article: any = {
         title: this.articleTitle,
         ownerPublicKey: "ddd",
         totalVotes: 10,
-        poolAcc:{
-          publickey:"fjfjf",
-          privatekey:"ckfkf"
+        poolAcc: {
+          publickey: "fjfjf",
+          privatekey: "ckfkf"
         },
-        timestamp:Date.now(),
+        timestamp: Date.now(),
         image: this.b64,
-        contribution:[{
+        contribution: [{
           owner: "user name",
           content: this.articleContent,
           SHA256: "sndhcjdjd99e3838ehxn",
@@ -64,18 +58,12 @@ export class CreateArticleComponent implements OnInit {
             blogcoin: 10
           }],
           timestamp: Date.now(),
-          txnID:"Xda%gavGFCzhRa4T"
+          txnID: "Xda%gavGFCzhRa4T"
         }]
       }
       this.articleService.addNewArticle(article);
-      
     } catch (error) {
       console.log('please upload an image before publishing');
     }
-    
-    
   }
-
-
-
 }

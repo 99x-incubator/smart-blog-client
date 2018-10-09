@@ -27,6 +27,7 @@ const router: Routes = [
   { path: 'createarticle', component: CreateArticleComponent},
   { path: 'home' , component: HomeComponent},
   { path: 'article' , component: ArticleComponent},
+  { path: 'article/:id' , component: ArticleComponent},
   { path: '' , redirectTo: '/home' , pathMatch: 'full'}
 ];
 
