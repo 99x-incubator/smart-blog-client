@@ -1,34 +1,24 @@
 <app-top-nav></app-top-nav>
 
-
 <div class="container py-3">
   
   <div class="md-form">
-    <input mdbInputDirective type="text" id="form1" class="form-control" [(ngModel)]="articleTitle">
-    <label for="form1" class="">Enter The Article Title</label>
+    <input mdbInputDirective type="text" id="form1" class="form-control" style="font-size: 40pt" [(ngModel)]="articleTitle">
+    <label for="form1" class="" style="font-size:15pt">Add article title</label>
   </div>
 
   <br>
 
   <div class="md-form">
-    <p>Upload Article Image</p>
+    <p>Upload cover image</p>
     <input type="file" (change)="onFileSelected($event)"> 
   </div>
-
   
-  <quill-editor theme='snow' scrollingContainer="html, body" placeholder="Add content here..." [(ngModel)]="articleContent"></quill-editor>
-
-  {{articleContentFromHtml}}
-
-  <div [innerHtml]="content"></div>
-
-  
+  <quill-editor theme='snow' scrollingContainer="html, body" placeholder="Add content here..." [(ngModel)]="articleContent" ></quill-editor>
 
   <button mdbBtn type="button" color="default" class="waves-light pull-right" mdbWavesEffect (click)="submitArticleInfo()">Publish</button>
   <div class="my-5 py-3"></div>
 </div>
-
-
 
 <app-footer></app-footer>
 
