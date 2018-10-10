@@ -1,7 +1,7 @@
 <!--Section: Blog v.4-->
 <app-top-nav></app-top-nav>
 <div class="container">
-<section class="pt-5 mt-4 pb-3">
+  <section class="pt-5 mt-4 pb-3">
 
     <!--Grid row-->
     <div class="row">
@@ -14,7 +14,7 @@
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
-  
+
           <!--Post data-->
           <mdb-card-body cascade="true" class="text-center">
             <h2>
@@ -22,44 +22,46 @@
             </h2>
             <p>Written by
               <a>{{articleAuthor}}</a>, 26/08/2018</p>
-  
+
             <!--Social shares-->
             <div class="social-counters ">
-  
+
+              <button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect>Edit Document</button>
+
               <!--Facebook-->
               <a mdbBtn class="btn-fb waves-light" mdbWavesEffect>
                 <i class="fa fa-facebook left "></i>
                 <span class="clearfix d-none d-md-inline-block">Facebook</span>
               </a>
               <span class="counter ">46</span>
-  
+
               <!--Twitter-->
               <a mdbBtn class="btn-tw waves-light" mdbWavesEffect>
                 <i class="fa fa-twitter left "></i>
                 <span class="clearfix d-none d-md-inline-block">Twitter</span>
               </a>
               <span class="counter ">22</span>
-  
+
               <!--Google+-->
               <a mdbBtn class="btn-gplus waves-light" mdbWavesEffect>
                 <i class="fa fa-google-plus left "></i>
                 <span class="clearfix d-none d-md-inline-block">Google+</span>
               </a>
               <span class="counter ">31</span>
-  
+
               <!--Comments-->
               <a mdbBtn color="default" class="waves-light" mdbWavesEffect>
                 <i class="fa fa-comments-o left "></i>
                 <span class="clearfix d-none d-md-inline-block">Comments</span>
               </a>
               <span class="counter ">18</span>
-  
+
             </div>
             <!--Social shares-->
           </mdb-card-body>
           <!--Post data-->
         </mdb-card>
-  
+
         <!--Excerpt-->
         <div class="excerpt mt-5">
           {{articleContent}}
@@ -67,9 +69,9 @@
       </div>
     </div>
     <!--Grid row-->
-  
+
   </section>
 </div>
 
 <app-quill-editor [userContent]="userContent"></app-quill-editor>
-  <!--Section: Blog v.4-->
+<!--Section: Blog v.4-->

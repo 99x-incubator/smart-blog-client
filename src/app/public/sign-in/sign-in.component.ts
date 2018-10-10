@@ -22,11 +22,8 @@ export class SignInComponent implements OnInit {
     });
   }
 
-
-
   ngOnInit() {
   }
-
 
   submit() {
     console.log(this.signInForm.value);
