@@ -28,7 +28,7 @@
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "js-stellar-sdk": "0.0.2",
-    "ngx-quill": "^3.6.0",
+    "ngx-quill": "^4.0.0",
     "quill": "^1.3.6",
     "rxjs": "^6.0.0-rc.1",
     "web-animations-js": "^2.3.1",
