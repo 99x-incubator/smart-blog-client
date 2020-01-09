@@ -17,7 +17,10 @@
         </ul>
         <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav" *ngIf="user">
             <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>
+                <a class="nav-link waves-light" mdbWavesEffect (click)="onCreateBlog()"><i class="fa fa-plus-square"></i><span class="clearfix d-none d-sm-inline-block">&nbsp;New blog</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-user"></i><span class="clearfix d-none d-sm-inline-block">&nbsp;Account</span></a>
             </li>
             <li class="nav-item dropdown btn-group" dropdown>
                 <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
