@@ -13,8 +13,4 @@ export class TopNavComponent implements OnInit {
   ngOnInit() {
   }
 
-  onCreateBlog() {
-    // Handle click
-  }
-
 }
