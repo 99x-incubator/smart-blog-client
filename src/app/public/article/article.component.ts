@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-article',
@@ -15,31 +15,35 @@ export class ArticleComponent implements OnInit {
   articleInfo = [
     {
       articleId: 1,
-      userName : 'Raveen',
-      articleTitle : 'What is block chain',
+      userName: 'Raveen',
+      articleTitle: 'What is block chain',
       content: 'This is all about block chain'
-    }, 
+    },
 
     {
       articleId: 2,
-      userName : 'Azkar',
+      userName: 'Azkar',
       articleTitle: 'Why do we need computers?',
       content: 'This is why we need computers'
     }
   ];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.articleId = this.route.snapshot.params['id'];
 
     this.articleInfo.forEach(element => {
-      if(element.articleId == this.articleId) {
+      if (element.articleId == this.articleId) {
         this.articleTitle = element.articleTitle;
         this.articleContent = element.content;
         this.articleAuthor = element.userName;
       }
     });
+  }
+
+  onEdit() {
+    this.router.navigateByUrl(`/edit-article/${this.articleId}`)
   }
 
 }
