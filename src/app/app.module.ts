@@ -20,15 +20,17 @@ import { ArticleService } from './services/article.service';
 import { QuillModule } from 'ngx-quill';
 import { CreateArticleComponent } from './secure/create-article/create-article.component';
 import { EditArticleComponent } from './secure/edit-article/edit-article.component';
+import { ProfileComponent } from './public/profile/profile.component';
 
 const router: Routes = [
   { path: 'sign-in' , component: SignInComponent},
   { path: 'sign-up' , component: SignUpComponent},
-  { path: 'createarticle', component: CreateArticleComponent},
+  { path: 'create-article', component: CreateArticleComponent},
   { path: 'home' , component: HomeComponent},
-  { path: 'article' , component: ArticleComponent},
   { path: 'article/:id' , component: ArticleComponent},
-  { path: '' , redirectTo: '/home' , pathMatch: 'full'}
+  { path: 'profile', component: ProfileComponent},
+  { path: '' , redirectTo: '/home' , pathMatch: 'full'},
+  { path: '**', redirectTo: '/home'}
 ];
 
 @NgModule({
@@ -42,6 +44,7 @@ const router: Routes = [
     ArticleComponent,
     CreateArticleComponent,
     EditArticleComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
