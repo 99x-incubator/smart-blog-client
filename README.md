@@ -36,12 +36,12 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-### License
+## License
 
 Distributed under the MIT [License](https://github.com/99xt-incubator/smart-blog-client/blob/master/LICENSE). 
 
 
-### Contributors
+## Contributors
 
 <a href="https://github.com/99xt-incubator/smart-blog-client/graphs/contributors">
   <img src="https://contributors-img.firebaseapp.com/image?repo=99xt-incubator/smart-blog-client" />
